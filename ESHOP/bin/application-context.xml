@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/tx 
+						http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+						http://www.springframework.org/schema/context 
+        				http://www.springframework.org/schema/context/spring-context-3.0.xsd
+						http://www.springframework.org/schema/aop 
+						http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+						http://www.springframework.org/schema/jdbc 
+						http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+						http://www.springframework.org/schema/security
+						http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+
+	<context:component-scan base-package="com.csc.adaas.eshop.server.*,com.csc.adaas.eshop.registration.*,"/>
+	
+	<import resource="classpath:com/csc/adaas/eshop/security/application-security.xml" />
+	
+	 
+	<!-- enable the configuration of transactional behavior based on annotations-->
+	<tx:annotation-driven transaction-manager="txManager" />
+	
+	<!-- enable AOP proxy -->
+	<aop:aspectj-autoproxy/>
+	<bean id="businessProfiler" class="com.csc.adaas.eshop.server.perf.Aspects" />
+	
+	<!-- a PlatformTransactionManager is still required-->
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<!-- (this dependency is defined somewhere else) -->
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!--
+		jdbc:sqlfire://localhost:1527/ com.vmware.sqlfire.jdbc.ClientDriver
+		jdbc:sqlfire:;mcast-address=224.0.0.1;mcast-port=33666;host-data=false com.vmware.sqlfire.jdbc.EmbeddedDriver.
+	-->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	   <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	   <property name="url" value="jdbc:mysql://localhost:3306/eshop" />
+    	<property name="username" value="adaasuser" />
+    	<property name="password" value="adaas" />
+    	<property name="initialSize" value="100" />
+    	<property name="maxActive" value="100" />
+    	<property name="maxIdle" value="8" />
+    	<property name="minIdle" value="1" />
+    	<property name="maxWait" value="15000" />
+  	</bean>
+  	
+  	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+  		<property name="dataSource" ref="dataSource" />
+  	</bean>
+</beans>

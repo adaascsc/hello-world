@@ -1,0 +1,655 @@
+body {
+	font-family: arial, helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 95%;
+}
+
+body#main {
+	border: 0.06em; 
+	border-style: solid; 
+	border-color: #ccc; 
+	width: 74em; 
+	min-height: 31.25em;
+}
+
+.backgroundBorder {
+	background-color: #ccc;
+}
+
+.backgroundWhite {
+	background-color: white;
+}
+
+div#outerDiv {
+	width: 74em; 
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+	color: #0A273D;
+	font-weight: 600;
+}
+
+label {
+	width: 8em;
+	float: left;
+	text-align: right;
+	margin: 0.3em 0 0 0.25em;;
+	display: block;
+	font-weight: bold;
+}
+
+span.dialogHeader {
+	display: block;
+	padding: 0.25em;
+	font-weight: bold;
+}
+
+span.dialogHeader,
+#container h3,
+#pageHeader {
+	color: white;
+}
+
+span.dialogHeader,
+#container h3 {
+	background-image: url('../images/blue.jpg');
+}
+
+#subHeader {
+    background-color: #ffffff;
+    color: #626262;
+}
+
+#buttons {
+	list-style-type: none;
+	margin: 0.75em 0;
+	padding: 0;
+}
+
+#buttons li {
+	display: inline;
+	margin: 0.25em 0.15em;
+}
+
+#container {
+    text-align: center;
+    width: 60%;
+}
+
+.registerUserContainer {
+    text-align: center;
+    width: 40%;
+}
+#home {
+    text-align: center;
+    width: 80%;
+}
+
+#container h3 {
+    padding: 0.15em 0;
+    margin: 0.5em 0;
+}
+
+.centeredImage {
+	text-align:center;
+    display:block;
+}
+
+
+/*#container table {
+    border-collapse: collapse;
+    width: 80%;
+}*/
+
+/*
+#container table td,
+#container table th {
+	border: 1px solid #ccc;
+	padding: 0.2em;
+}
+
+#container table th {
+	border: 1px solid #ccc;
+	padding: 0.2em;
+	background-color: #98afc7;
+	font-size: 100%;
+}
+*/
+
+#footer {
+	position: relative;
+	line-height: 40px;
+	background: #FFFFFF url('../images/csc_logo.gif') no-repeat 5px 7px;
+	bottom: 1em;
+	font-size: 80%;
+	width: 100%;
+	left: 0px;
+	top: 30px;
+}
+
+#formFields {
+	margin-top: 1em;
+	border: 1px solid #ccc;
+	padding: 0;
+}
+
+#formFields p {
+	margin: 0.25em;
+	padding: 0.25em;
+	width: 97.5%;
+}
+
+#formFields p.left label {
+	margin-right: 3em;
+}
+
+#formFields p.left input,
+#formFields p.left select {
+    margin-left: 0.5em;
+}
+
+#logout {
+	float: right;
+	display: block;
+	background-color: white;
+	padding: 0.15em;
+	border: 1px solid #039;
+	text-decoration: none;
+	font-size: 90%;
+	background-color: whitesmoke;
+	position: relative;
+	bottom: 0.2em;
+}
+
+#logout,
+#logout:visited {
+	color: #1F8521;
+}
+
+#logout:hover {
+	color: white;
+	text-decoration: underline;
+	background-color: #4b5a87;
+}
+
+fieldset {
+	border: 1px solid #2b56aa;
+	padding: .5em;
+	width: 72em; 
+}
+
+.labelHeads {
+	padding: 0 5px 0 0;
+	font-size: 12pt;
+	font-weight:bold;
+	color:white;
+	background-color: #1F8521;
+}
+
+.labelNames {
+	padding: 0 5px 0 0;
+	font-size: 100%;
+	height: 2em;
+}
+
+.labelNames_right {
+	padding: 0 5px 0 0;
+	font-size: 8pt;
+	text-align: right;
+}
+
+.labelNames_left {
+	padding: 0 5px 0 0;
+	font-size: 12px;
+	text-align: left;
+	font-weight: bold;
+}
+
+/* meun css */
+/* Main menu ------------------------------------------*/
+#coolMenu,
+#coolMenu ul {
+	list-style: none;
+}
+
+#coolMenu {
+	text-align: left;
+	float: left; 
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	background: url('../images/blue.jpg');
+	width: 90.4em;
+	margin-top: 3px;
+} 
+
+#coolMenu > li {
+	float: left; 
+} 
+
+#coolMenu li a { 
+	display: block;
+	height: 2em;
+	line-height: 2em;
+	padding: 0 1.5em;
+	text-decoration: none; 
+} 
+
+#coolMenu ul {
+	position: absolute;
+	display: none; 
+	z-index: 999;
+	padding: 0; 
+} 
+
+#coolMenu ul li a {
+	width: 100px; 
+} 
+
+#coolMenu li:hover ul {
+	display: block; 
+}
+
+#coolMenu > li > a {
+	color: #fff;
+	font-weight: bold; 
+} 
+
+#coolMenu > li:hover > a {
+	background: #0A273D;
+	color: #fff; 
+}   
+
+/* Submenu ------------------------------------------*/
+#coolMenu ul {
+	background: #0A273D; 
+} 
+
+#coolMenu ul li a {
+	color: #fff; 
+} 
+
+#coolMenu ul li:hover a {
+	background: #999999; 
+}
+
+#coolMenu li:hover ul.noJS {
+	display: block; 
+}
+
+/* end of menu css */
+
+#pageHeader {
+	line-height: 85px;
+	background-image:url('../images/flowervector.jpg');
+	text-align: center;
+	padding-left: 5px;
+}
+
+#subHeader {
+	margin-top: 3px;
+	padding: 0.25em;
+	height: 1.25em;
+}
+
+.sortAsc { 
+    background-image: url('../images/asc.gif'); 
+	background-repeat: no-repeat; 
+    background-position: center top;
+} 
+
+.sortDesc { 
+    background-image: url('../images/desc.gif');
+	background-repeat: no-repeat; 
+    background-position: center top;
+}
+
+#user {
+	float: left;
+}
+
+.centre {
+    text-align: center;
+}
+
+.dialog {
+	width: 300px;
+	margin: 20px auto 0 auto;
+	border: 1px solid #ddd;
+	background-color: whitesmoke;	
+}
+.dialogReg{
+	width: 400px;
+	margin: 20px auto 0 auto;
+	border: 1px solid #ddd;
+	background-color: whitesmoke;	
+}
+
+
+.dialog label {
+	font-size: 90%;
+	font-weight: bold;
+}
+
+.dialog input {
+	font-weight: bold;
+}
+
+.dialog input[type="password"],
+.dialog input[type="text"] {
+	padding: 0.25em;
+	width: 10em;
+}
+
+.dialog p {
+    margin: 0.75em 0;
+}
+
+.odd_buttons {
+	font-family: "Verdana, Geneva, Arial, Helvetica, sans-serif;";
+	font-size: 9pt;
+	background-color: #626262;
+	border: 0px solid #333333;
+}
+
+.even {
+	background-color: whitesmoke;
+	height:22px;
+	cursor: default;
+}
+
+.result_even {
+	background-color: white;
+	border-right:0; border-bottom:0;
+}
+
+.result_even_hover {	
+	background-color: #FFFFAA;	
+}
+
+.left {
+    text-align: left;
+}
+
+.odd {
+	background-color: #AFF592;
+	height:22px;
+	cursor: default;
+}
+
+.result_odd {
+	background-color: whitesmoke;
+	border-right:0; border-bottom:0;
+}
+
+.result_odd_hover {	
+	background-color: #FFFFAA;	
+}
+
+.even1 {
+	background-color: white;
+	height:80px;
+	cursor: default;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.short {
+	width: 4em;
+}
+	
+.submenu {
+	font-weight: normal;
+}
+
+.odd_hover {	
+	background-color: #FFFFAA;	
+	cursor: pointer;
+}
+
+.even_hover {	
+	background-color: #FFFFAA;
+	cursor: pointer;	
+}
+
+/* NM - non modifiable hence cursor is default*/
+.odd_hover_NM {	
+	background-color: #FFFFAA;
+}
+
+.even_hover_NM {	
+	background-color: #FFFFAA;
+}
+
+.highlight {
+	background-color: #CCFF99;
+}
+
+.highlight_hover {
+	background-color: #99CC66;
+}
+
+.success, .error, .validation, .info {
+	border: 1px solid;
+	margin: 3px auto;
+	padding:10px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	font-size: 0.83em;
+	width:50%;
+}
+
+.success {
+	color: #4F8A10;
+	background-color: #FFFFFF;
+	background-image:url('../images/success.png');
+}
+
+.error {
+	color: #D8000C;
+	font-size: 1em;
+	background-color: #FFFFFF;
+	background-image: url('../images/error.png');
+}
+
+.validation {
+	color: #D63301;
+	background-color: #FFFFFF;
+	background-image: url('../images/validation.png');
+}
+
+.info {
+	color: #00529B;
+	background-color: #FFFFFF;
+	background-image: url('../images/info.png');
+}
+
+.textfield_50 {
+	width: 50px;
+}
+
+.textfield_70 {
+	width: 70px;
+}
+
+.textfield_100 {
+	width: 100px;
+}
+
+.textfield_200 {
+	width: 200px;
+}
+
+.textfield_300 {
+	width: 300px;
+}
+
+.dropdown_30 {
+	width: 30px;
+}
+
+.dropdown_90 {
+	width: 90px;
+}
+
+.dropdown_150 {
+	width: 150px;
+}
+
+.labelDisplay{
+	text-align:left;
+}
+
+body.wait * { 
+cursor:wait !important; 
+} 
+
+.errorField {
+border-style: solid;
+border-color: #CC0033;
+}
+
+select.errorField, option.errorField {
+background-color: #CC0033;
+}
+
+select.normalField, option.normalField {
+background-color: white;
+}
+
+/* Pagination
+---------------------------------------- */
+.pagingItem {
+	font-weight: bold;
+	font-family: Verdana, arial, helvetica, sans-serif;
+	font-size: 0.75em;
+	text-decoration: none;
+	color: #747474;
+	margin: 0 2px;
+	padding: 0 2px;		
+	line-height: 1.5em;
+}
+
+.pagingItemCurrent {
+	padding: 0 2px;
+	margin: 0 2px;
+	font-weight: bold;
+	font-family: Verdana, arial, helvetica, sans-serif;
+	font-size: 0.75em;
+	color: #747474;	
+}
+
+.pagingDots {
+	font-weight: normal;
+}
+
+.pagination span a:hover {
+	border-color: #d2d2d2;	
+	color: #FFF;
+	text-decoration: none;
+}
+
+.pagination img {
+	vertical-align: middle;
+}
+
+.cursorPointer {
+	cursor: pointer;
+}
+
+.upperCaseText {
+	text-transform: uppercase; 
+}
+
+/*End of Pagination css*/
+
+div#container {
+	width: 100%;
+}
+
+#formFields1 {
+	margin-top: 1em;
+	border: 0.1em solid #ccc;
+	padding: 0;
+	width: 25em; 
+	position: relative; 
+	left: -12em; 
+	border-right: none
+}
+
+#formFields1 p {
+	margin: 0.25em;
+	padding: 0.25em;
+}
+
+#formFields1 p.left label {
+	margin-right: 2em;
+}
+
+#formFields1 p.left input,
+#formFields1 p.left select {
+    margin-left: -0.1em;
+}
+
+#formFields2 {
+	margin-top: 1em;
+	border: 0.1em solid #ccc;
+	padding: 0;
+	width: 25em; 
+	border-left: none; 
+	position: relative; 
+	left: 12.2em; 
+	top: -15.55em;
+}
+
+#formFields2 p {
+	margin: 0.25em;
+	padding: 0.25em;
+}
+
+#formFields2 p.left label {
+	margin-right: 2em;
+}
+
+#formFields2 p.left input,
+#formFields2 p.left select {
+    margin-left: -0.1em;
+}
+
+.sortHeader {
+	cursor: pointer;
+}
+
+.errorLinkRow {
+	cursor: pointer;
+}
+.productCat  {
+	color: #000066; 
+	font-weight: bold;
+	
+}
+.productPrice {
+	color: #CC0000; 
+	font-weight: bold;
+} 
+.buttonAdd  {
+	background: #FF9900; 
+}
+/* Messages */
+#errorMessages {
+	width: 60%;
+}
+
+#successMessages {
+	width: 60%;
+}
+/* End of Messages */

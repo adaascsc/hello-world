@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/jsp/">
+	<excludes>
+		<pattern>/login.htm</pattern>
+		<pattern>/logout.htm</pattern>
+		<pattern>/registerUser.htm</pattern>
+		<pattern>/registerNewUser.htm</pattern>
+		<pattern>/loginFailure.htm*</pattern>
+		<pattern>/accessDenied.htm</pattern>
+		<pattern>/logout.htm</pattern> 
+      
+    </excludes>
+    <decorator name="main" page="includes/main.jsp">
+     	<pattern>/*</pattern>
+    </decorator>
+</decorators>
+
